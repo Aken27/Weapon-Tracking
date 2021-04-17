@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="styles/main.css">
+	<title>Weapon-Tracker</title>
+</head>
+
+<body>
+	
+
+	<header class="app-main-header">
+
+		<h1 class="column" title="Solidity based Weapon-Tracker">
+			
+			<span>Weapon Tracker</span>
+		</h1>
+
+		<div class="column">
+			<a class="github-badge"  href="">
+				<img src="svg/w.svg" alt="logo">
+			</a>
+		</div>
+	</header>
+
+	<main class="wrapper">
+		<div class='dynamic-block'>
+			<form>
+				<div id="createasset">
+					<h2>Create An Asset</h2>
+					
+					<div class="input-form">
+						<input type="text" id="AssetType" name="AssetType" placeholder="Enter the type">
+					</div>
+					<div class="input-form">
+						<input type="text" id="AssetMan" name="AssetMan" placeholder="Enter the manufacturer">
+					</div>
+					<div class="input-form">
+						<input type="text" id="Init" name="Init" placeholder="Initialized: T or F?">
+					</div>
+					<br>
+					<br>
+					<button type="button" id="AssetCreate" name="AssetCreate" >Create Asset</button>
+					
+					<div class="input-form">
+						<input type="text" id="AssetUUID" name="AssetUUID" placeholder="UUID">
+					</div>
+					<br>
+	
+				</div>
+				<br>
+			</form>
+			
+			<br>
+		 <form> 
+			<div id="createmanufacturer">
+				<h2>Create Manufacturer</h2>
+				<div class="input-form">
+					<input type="text" id="ManName" name="ManName" placeholder="Enter the name">
+				</div>
+				<div class="input-form">
+					<input type="text" id="ManFFL" name="ManFFL" placeholder="FL: T or F">
+				</div>
+				<br><br>
+
+				<button type="button" id="CreateMan" name="CreateMan" >Create Manufacturer</button>
+				<div class="input-form">
+					<input type="text" id="ManAddr" name="ManAddr" placeholder="Manufacturer Address">
+				</div>
+		
+				<br><br>
+			</div>
+		</form>
+		<br>
+		<br>
+		<form>
+			<div id="createdealer">
+				<h2>Create Dealer</h2>
+				<div class="input-form">
+					<input type="text" id="DealName" name="DealName" placeholder="Enter the name">
+				</div>
+				<div class="input-form">
+					<input type="text" id="DealFFL" name="DealFFL" placeholder="FL: T or F">
+				</div>
+				<br><br>
+
+				<button type="button" id="CreateDeal" name="CreateDeal" >Create Vendor</button>
+				<div class="input-form">
+					<input type="text" id="DealerAddr" name="DealerAddr" placeholder="Vendor Address">
+				</div>
+				<br><br>
+			</div> 
+		</form>
+		<br>
+		<br>
+			<form>
+			<div id="createowner">
+				<h2>Create Buyer</h2>
+				<div class="input-form">
+					<input type="text" id="OwnerName" name="OwnerName" placeholder="Enter the name">
+				</div>
+				<div class="input-form">
+					<input type="number" id="OwnerAge" name="OwnerAge" placeholder="Enter the id">
+				</div>
+				<br><br>
+				<button type="button" id="CreateOwner" name="CreateOwner" >Create Buyer</button>
+
+				<div class="input-form">
+					<input type="text" id="OwnerAddr" name="OwnerAddr" placeholder="Buyer Address" value="">
+				</div>
+				<br><br>
+			</div>
+		</form>
+		<br>
+		<br>
+		<form>
+			<div id="transferasset">
+				<h2>Transfer An Asset</h2>
+				<button type="button" id="TransferAsset" name="TransferAsset">Transfer Asset</button><br><br>
+				<div class="input-form">
+					<input type="text" id="TransferTo" placeholder="Enter where to" name="ToField">
+				</div>
+				
+				<div class="input-form">
+					<input type="text" id="TransferAssUUID" placeholder="Enter asset UUID" name="AssetTransferUUID">
+				</div>
+				<!-- <div class="input-form">
+					<input type="text" id="TransferFrom" placeholder="Enter where from" name="FromField">
+				</div> -->
+				
+				<br><br>
+				<div class="input-form">
+					 <input type="text" id="TransferSuccess" name="myTextarea"  placeholder="Displays success or failure ">
+				 </div>
+				<br>
+			</div>
+		 </form>
+		<br>
+		<br>  
+		<!-- <form>
+			<div id="displayhistory">
+				<h2>Display Asset History</h2>
+				<button type="button" id="DispHist" name="DispHist" formtarget="_self">Display History</button><br><br>
+				<div class="input-form">
+					<input type="text" id="AssetUUID" name="AssetUUID" placeholder="Enter the UUID">
+				</div>
+				<br><br>
+				<div class="input-form">
+					<h3 id="">Displays history.</h3>
+					 <textarea id="HistoryArea" name="HistoryArea" placeholder="Displays history." cols="30" rows="15"></textarea> 
+				</div>
+				<br>
+			</div>  
+		</form>	  -->
+		</div>
+	</main>
+	
+	<div id="magnet-overlay"></div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/web3.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/truffle-contract.js"></script>
+</body>
+
+</html>
